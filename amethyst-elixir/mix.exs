@@ -18,14 +18,15 @@ defmodule Amethyst.MixProject do
 
   def application do
     [
-      extra_applications: [:logger],
+      extra_applications: [:logger, :observer, :wx, :runtime_tools],
       mod: {Amethyst.Application, []}
     ]
   end
 
   defp deps do
     [
-      {:ex_doc, "~> 0.37.2", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.37.2", only: :dev, runtime: false},
+      {:observer_cli, "~> 1.8"}
     ]
   end
 
